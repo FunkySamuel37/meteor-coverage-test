@@ -8,7 +8,9 @@ Meteor.methods({
   'links.insert'(title, url) {
     check(url, String);
     check(title, String);
-
+    if(title === 'test') {
+      console.log('do')
+    }
     return Links.insert({
       url,
       title,
